@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: hsl(230, 35%, 7%);
+  --color-secondary: #d0d6f9;
+  --color-tertiary: #ffffff;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bellefair {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --color-primary: #0b0d17;
+  --color-secondary: #d0d6f9;
+  --color-tertiary: #ffffff;
+}
+
+.home-background {
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .home-background {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-background {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.destination-background {
+  background-image: url("./assets/destination/background-destination-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .destination-background {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .destination-background {
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.crew-background {
+  background-image: url("./assets/crew/background-crew-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .crew-background {
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .crew-background {
+    background-image: url("./assets/crew/background-crew-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.technology-background {
+  background-image: url("./assets/technology/background-technology-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .technology-background {
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology-background {
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
