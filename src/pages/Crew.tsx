@@ -45,34 +45,34 @@ const Crew = () => {
 
   return (
     <div className="crew-background min-h-screen flex items-center justify-center px-4">
-      <div className="mt-40 max-w-6xl w-full">
-        <h2 className="text-white uppercase text-3xl mb-10 font-light">
+      <div className="mt-32 lg:mt-[14rem] mb-10 md:mb-0 lg:mb-40 max-w-6xl w-full">
+        <h2 className="text-white uppercase text-3xl mb-10 font-light text-center lg:text-left">
           <span className="mr-2 text-white/40">02</span> Meet your crew
         </h2>
 
         {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 mt-[100px]">
           {/* Left: Text & Controls */}
           <div className="text-white">
-            <h3 className="uppercase text-white/50 text-2xl bellefair mb-2">
+            <h3 className="uppercase text-white/50 text-2xl bellefair mb-1 text-center lg:text-left">
               {current.title}
             </h3>
-            <h1 className="bellefair text-[1.5rem] md:text-[3rem] uppercase">
+            <h1 className="bellefair text-[2rem] md:text-[3rem] uppercase text-center lg:text-left mb-4">
               {current.name}
             </h1>
-            <p className="text-lg text-secondary  mb-10 tracking-wider">
+            <p className="text-lg text-secondary  mb-10 tracking-wider text-center lg:text-left">
               {current.description}
             </p>
 
             {/* Carousel dots */}
-            <div className="flex gap-4 mt-28">
+            <div className="flex gap-4 lg:mt-[20rem] justify-center lg:justify-start">
               {tabs.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   className={`h-3 w-3 rounded-full transition-all duration-300 ${
                     currentIndex === idx
-                      ? "bg-white w-5"
+                      ? "bg-white/30"
                       : "bg-white/30 hover:bg-white/60"
                   }`}
                 />

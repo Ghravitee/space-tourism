@@ -32,51 +32,49 @@ const Technology = () => {
   const current = tabs[currentIndex];
 
   return (
-    <div className="technology-background min-h-screen flex items-center justify-center px-4 pb-10">
-      <div className="mt-40 max-w-6xl w-full">
-        <h2 className="text-white uppercase text-3xl mb-10 font-light">
+    <div className="technology-background min-h-screen flex items-center justify-center pb-10">
+      <div className="mt-40 lg:mt-[12rem] w-full lg:pl-[10rem]">
+        <h2 className="text-white uppercase text-3xl mb-10 font-light text-center lg:text-left">
           <span className="mr-2 text-white/40">03</span> Space launch 101
         </h2>
 
         {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-          <div className="flex items-center gap-10">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-[.6fr_.4fr] items-center gap-x-10 gap-y-12">
+          <div className="flex flex-col lg:flex-row items-center gap-x-20 gap-y-10">
             {/* Left: Text & Controls */}
-            <div className="flex flex-col gap-y-10">
+            <div className="flex flex-row lg:flex-col gap-y-10 gap-x-4">
               {tabs.map((_, id) => (
                 <button
                   key={id}
                   onClick={() => setCurrentIndex(id)}
-                  className={`h-16 w-16 rounded-full transition-all duration-300 cursor-pointer  ${
+                  className={`h-[50px] w-[50px] lg:h-16 lg:w-16 rounded-full transition-all duration-300 cursor-pointer  ${
                     currentIndex === id
                       ? "bg-white text-primary"
-                      : "bg-transparent border text-white border-white hover:bg-white/80 hover:text-primary"
+                      : "bg-transparent border text-white border-white/70 hover:border-white"
                   }`}
                 >
-                  <p className="bellefair font-bold text-2xl">{id + 1}</p>
+                  <p className="bellefair font-bold text-[18px] lg:text-2xl">
+                    {id + 1}
+                  </p>
                 </button>
               ))}
             </div>
-            <div className="text-white">
-              <h3 className="uppercase text-white/70 text-lg mb-2">
+            <div className="text-white text-center lg:text-left">
+              <h3 className="uppercase text-white/70 text-lg lg:text-[2rem] mb-2 bellefair tracking-wide font-light ">
                 The Terminology...
               </h3>
-              <h1 className="bellefair text-[1.5rem] md:text-[3rem] uppercase">
+              <h1 className="bellefair text-[1.5rem] md:text-[3rem] lg:text-[4rem] uppercase leading-[1.2] mb-4">
                 {current.title}
               </h1>
-              <p className="text-lg text-secondary mb-10 tracking-wider">
+              <p className="text-lg text-secondary mb-10 tracking-wider max-w-[27.5rem]">
                 {current.description}
               </p>
               {/* Carousel dots */}
             </div>
             {/* Right: Image */}
           </div>
-          <div className="flex justify-center items-center">
-            <img
-              src={current.image}
-              alt={current.title}
-              className="w-full max-w-sm md:max-w-md object-contain"
-            />
+          <div className="w-full">
+            <img src={current.image} alt={current.title} className="w-full " />
           </div>
         </div>
       </div>
